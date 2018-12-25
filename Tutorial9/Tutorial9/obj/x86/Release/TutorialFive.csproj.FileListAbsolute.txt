@@ -1,0 +1,19 @@
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\TutorialFive.Form1.resources
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\TutorialFive.Properties.Resources.resources
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\bin\Release\TutorialFive.exe
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\bin\Release\TutorialFive.pdb
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\bin\Release\NAudio.dll
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\TutorialFive.exe
+C:\Users\Montana\AppData\Local\Temporary Projects\TutorialFive\obj\x86\Release\TutorialFive.pdb
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\TutorialFive.Form1.resources
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\TutorialFive.Properties.Resources.resources
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\TutorialFive.exe
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\bin\Release\TutorialFive.exe
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\bin\Release\TutorialFive.pdb
+D:\Users\Montana\Desktop\tutorials\TutorialFive\TutorialFive\obj\x86\Release\TutorialFive.pdb

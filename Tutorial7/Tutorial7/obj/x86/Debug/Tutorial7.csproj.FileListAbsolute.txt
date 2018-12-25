@@ -1,0 +1,10 @@
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\Tutorial6.exe
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\Tutorial6.pdb
+D:\Tutorials\Tutorial7\Tutorial7\bin\Debug\Tutorial6.exe
+D:\Tutorials\Tutorial7\Tutorial7\bin\Debug\Tutorial6.pdb
+D:\Tutorials\Tutorial7\Tutorial7\bin\Debug\NAudio.dll
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\Tutorial7.Form1.resources
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\Tutorial6.Properties.Resources.resources
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Tutorials\Tutorial7\Tutorial7\obj\x86\Debug\GenerateResource.write.1.tlog

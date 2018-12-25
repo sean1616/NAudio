@@ -1,0 +1,10 @@
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\bin\Debug\Tutorial6.exe
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\bin\Debug\Tutorial6.pdb
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\bin\Debug\NAudio.dll
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\Tutorial6.Form1.resources
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\Tutorial6.Properties.Resources.resources
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\Tutorial6.exe
+c:\users\montana\documents\visual studio 2010\Projects\Tutorial6\Tutorial6\obj\x86\Debug\Tutorial6.pdb
