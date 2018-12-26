@@ -289,5 +289,10 @@ namespace drawing
             Mouse_up_point = new Point(e.X, e.Y);
             pic_selection.Visible = false;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

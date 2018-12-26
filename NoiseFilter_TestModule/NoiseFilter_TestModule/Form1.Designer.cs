@@ -36,7 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Btn_Stop_Tone = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel_Tone_output = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Start_Tone
@@ -117,17 +120,39 @@
             this.Btn_Stop_Tone.UseVisualStyleBackColor = true;
             this.Btn_Stop_Tone.Click += new System.EventHandler(this.Btn_Stop_Tone_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel_Tone_output);
+            this.groupBox2.Location = new System.Drawing.Point(222, 15);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(555, 135);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tone Receive";
+            // 
+            // panel_Tone_output
+            // 
+            this.panel_Tone_output.BackColor = System.Drawing.Color.White;
+            this.panel_Tone_output.Location = new System.Drawing.Point(21, 21);
+            this.panel_Tone_output.Name = "panel_Tone_output";
+            this.panel_Tone_output.Size = new System.Drawing.Size(515, 100);
+            this.panel_Tone_output.TabIndex = 10;
+            this.panel_Tone_output.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Tone_output_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -142,6 +167,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Btn_Stop_Tone;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel_Tone_output;
     }
 }
 

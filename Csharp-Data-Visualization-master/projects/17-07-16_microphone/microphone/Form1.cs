@@ -135,5 +135,9 @@ namespace microphone
         {
             UpdateAudioGraph();
         }
+        private void scottPlotUC1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

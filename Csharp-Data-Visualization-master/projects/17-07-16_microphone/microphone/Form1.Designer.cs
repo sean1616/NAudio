@@ -37,23 +37,27 @@
             // 
             // scottPlotUC1
             // 
-            this.scottPlotUC1.Location = new System.Drawing.Point(12, 12);
+            this.scottPlotUC1.Location = new System.Drawing.Point(9, 9);
+            this.scottPlotUC1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.scottPlotUC1.Name = "scottPlotUC1";
-            this.scottPlotUC1.Size = new System.Drawing.Size(1108, 402);
+            this.scottPlotUC1.Size = new System.Drawing.Size(831, 302);
             this.scottPlotUC1.TabIndex = 4;
+            this.scottPlotUC1.Load += new System.EventHandler(this.scottPlotUC1_Load);
             // 
             // scottPlotUC2
             // 
-            this.scottPlotUC2.Location = new System.Drawing.Point(12, 420);
+            this.scottPlotUC2.Location = new System.Drawing.Point(9, 315);
+            this.scottPlotUC2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.scottPlotUC2.Name = "scottPlotUC2";
-            this.scottPlotUC2.Size = new System.Drawing.Size(1108, 384);
+            this.scottPlotUC2.Size = new System.Drawing.Size(831, 288);
             this.scottPlotUC2.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1021, 34);
+            this.button1.Location = new System.Drawing.Point(766, 26);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 17);
             this.button1.TabIndex = 6;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,12 +70,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 816);
+            this.ClientSize = new System.Drawing.Size(849, 612);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.scottPlotUC2);
             this.Controls.Add(this.scottPlotUC1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

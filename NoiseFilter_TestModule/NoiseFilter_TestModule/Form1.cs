@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 using NAudio.Wave;
 
 namespace NoiseFilter_TestModule
@@ -13,6 +14,12 @@ namespace NoiseFilter_TestModule
 
         private DirectSoundOut output = null;
         private BlockAlignReductionStream stream = null;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            
+        }
 
         private void Btn_Start_Tone_Click(object sender, EventArgs e)
         {
@@ -44,6 +51,18 @@ namespace NoiseFilter_TestModule
                 stream.Dispose();
                 stream = null;
             }
+        }
+
+        private void panel_Tone_output_Paint(object sender, PaintEventArgs e)
+        {            
+            Pen pen = new Pen(Color.Black);
+            Graphics graphics = panel_Tone_output.CreateGraphics();
+
+            graphics.Clear(Color.White);
+            Point p0 = new Point(1, panel_Tone_output.Height-1);
+            Point p1 = new Point(panel_Tone_output.Width - 1, panel_Tone_output.Height - 1);
+            graphics.DrawLine(pen, p0, p1);
+            graphics.DrawLine(pen, p0, new Point(1, 1));
         }
     }
 }

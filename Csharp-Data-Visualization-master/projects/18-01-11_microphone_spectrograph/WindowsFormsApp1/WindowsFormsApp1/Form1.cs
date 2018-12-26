@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             for (int i=0; i < fft_size; i++)
             {
                 //fft_buffer[i].X = (float)unanalyzed_values[i]; // no window
-                fft_buffer[i].X = (float)(unanalyzed_values[i] * FastFourierTransform.HammingWindow(i, fft_size));
+                //fft_buffer[i].X = (float)(unanalyzed_values[i] * FastFourierTransform.HammingWindow(i, fft_size));
                 fft_buffer[i].Y = 0;
             }
 

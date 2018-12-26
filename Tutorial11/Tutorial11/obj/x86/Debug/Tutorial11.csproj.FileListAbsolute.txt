@@ -8,3 +8,13 @@ D:\Tutorials\Tutorial11\Tutorial11\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Tutorials\Tutorial11\Tutorial11\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Tutorials\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.exe
 D:\Tutorials\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.pdb
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\bin\Debug\Tutorial11.exe
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\bin\Debug\Tutorial11.pdb
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.csprojResolveAssemblyReference.cache
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.Form1.resources
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.Properties.Resources.resources
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.csproj.GenerateResource.cache
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.csproj.CoreCompileInputs.cache
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.csproj.CopyComplete
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.exe
+C:\Users\sean_wu\source\repos\NAudio\Tutorial11\Tutorial11\obj\x86\Debug\Tutorial11.pdb
