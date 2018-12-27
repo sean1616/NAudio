@@ -10,3 +10,6 @@ C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModu
 C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\obj\Debug\NoiseFilter_TestModule.csproj.CopyComplete
 C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\obj\Debug\NoiseFilter_TestModule.exe
 C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\obj\Debug\NoiseFilter_TestModule.pdb
+C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\bin\Debug\ScottPlot.dll
+C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\bin\Debug\ScottPlot.pdb
+C:\Users\sean_wu\source\repos\NAudio\NoiseFilter_TestModule\NoiseFilter_TestModule\bin\Debug\NAudio.xml

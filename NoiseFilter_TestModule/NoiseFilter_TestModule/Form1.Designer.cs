@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Btn_Start_Tone = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.Btn_Stop_Tone = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel_Tone_output = new System.Windows.Forms.Panel();
+            this.scottPlotUC1 = new ScottPlot.ScottPlotUC();
+            this.timerReplot = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -139,11 +142,24 @@
             this.panel_Tone_output.TabIndex = 10;
             this.panel_Tone_output.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Tone_output_Paint);
             // 
+            // scottPlotUC1
+            // 
+            this.scottPlotUC1.Location = new System.Drawing.Point(12, 155);
+            this.scottPlotUC1.Margin = new System.Windows.Forms.Padding(2);
+            this.scottPlotUC1.Name = "scottPlotUC1";
+            this.scottPlotUC1.Size = new System.Drawing.Size(746, 279);
+            this.scottPlotUC1.TabIndex = 10;
+            // 
+            // timerReplot
+            // 
+            this.timerReplot.Interval = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.scottPlotUC1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -169,6 +185,8 @@
         private System.Windows.Forms.Button Btn_Stop_Tone;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel_Tone_output;
+        private ScottPlot.ScottPlotUC scottPlotUC1;
+        private System.Windows.Forms.Timer timerReplot;
     }
 }
 
