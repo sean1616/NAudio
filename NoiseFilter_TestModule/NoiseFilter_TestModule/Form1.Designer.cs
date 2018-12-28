@@ -38,7 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Btn_Stop_Tone = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel_Tone_output = new System.Windows.Forms.Panel();
             this.scottPlotUC1 = new ScottPlot.ScottPlotUC();
             this.timerReplot = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
@@ -125,41 +124,32 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panel_Tone_output);
-            this.groupBox2.Location = new System.Drawing.Point(222, 15);
+            this.groupBox2.Controls.Add(this.scottPlotUC1);
+            this.groupBox2.Location = new System.Drawing.Point(215, 165);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(555, 135);
+            this.groupBox2.Size = new System.Drawing.Size(1079, 266);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tone Receive";
             // 
-            // panel_Tone_output
-            // 
-            this.panel_Tone_output.BackColor = System.Drawing.Color.White;
-            this.panel_Tone_output.Location = new System.Drawing.Point(21, 21);
-            this.panel_Tone_output.Name = "panel_Tone_output";
-            this.panel_Tone_output.Size = new System.Drawing.Size(515, 100);
-            this.panel_Tone_output.TabIndex = 10;
-            this.panel_Tone_output.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Tone_output_Paint);
-            // 
             // scottPlotUC1
             // 
-            this.scottPlotUC1.Location = new System.Drawing.Point(12, 155);
+            this.scottPlotUC1.Location = new System.Drawing.Point(5, 13);
             this.scottPlotUC1.Margin = new System.Windows.Forms.Padding(2);
             this.scottPlotUC1.Name = "scottPlotUC1";
-            this.scottPlotUC1.Size = new System.Drawing.Size(746, 279);
+            this.scottPlotUC1.Size = new System.Drawing.Size(1069, 248);
             this.scottPlotUC1.TabIndex = 10;
             // 
             // timerReplot
             // 
             this.timerReplot.Interval = 2;
+            this.timerReplot.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.scottPlotUC1);
+            this.ClientSize = new System.Drawing.Size(1316, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -184,7 +174,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Btn_Stop_Tone;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel_Tone_output;
         private ScottPlot.ScottPlotUC scottPlotUC1;
         private System.Windows.Forms.Timer timerReplot;
     }

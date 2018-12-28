@@ -80,7 +80,8 @@ namespace NoiseFilter_TestModule
             PlotLatestData();
             timerReplot.Enabled = true;
         }
-
+        public int numberOfDraws = 0;
+        public bool needsAutoScaling = true;
         public void PlotLatestData()
         {
             // check the incoming microphone audio
@@ -119,26 +120,26 @@ namespace NoiseFilter_TestModule
             //fft = FFT(pcm);
 
             //// determine horizontal axis units for graphs
-            //double pcmPointSpacingMs = RATE / 1000;
-            //double fftMaxFreq = RATE / 2;
-            //double fftPointSpacingHz = fftMaxFreq / graphPointCount;
+            double pcmPointSpacingMs = RATE / 1000;
+            double fftMaxFreq = RATE / 2;
+            double fftPointSpacingHz = fftMaxFreq / graphPointCount;
 
             //// just keep the real half (the other half imaginary)
             //Array.Copy(fft, fftReal, fftReal.Length);
 
             //// plot the Xs and Ys for both graphs
-            //scottPlotUC1.Clear();
-            //scottPlotUC1.PlotSignal(pcm, pcmPointSpacingMs, Color.Blue);
+            scottPlotUC1.Clear();
+            scottPlotUC1.PlotSignal(pcm, pcmPointSpacingMs, Color.Blue);
             //scottPlotUC2.Clear();
             //scottPlotUC2.PlotSignal(fftReal, fftPointSpacingHz, Color.Blue);
 
             //// optionally adjust the scale to automatically fit the data
-            //if (needsAutoScaling)
-            //{
-            //    scottPlotUC1.AxisAuto();
-            //    scottPlotUC2.AxisAuto();
-            //    needsAutoScaling = false;
-            //}
+            if (needsAutoScaling)
+            {
+                scottPlotUC1.AxisAuto();
+                //scottPlotUC2.AxisAuto();
+                needsAutoScaling = false;
+            }
 
             ////scottPlotUC1.PlotSignal(Ys, RATE);
 
@@ -180,18 +181,6 @@ namespace NoiseFilter_TestModule
                 stream.Dispose();
                 stream = null;
             }
-        }
-
-        private void panel_Tone_output_Paint(object sender, PaintEventArgs e)
-        {            
-            Pen pen = new Pen(Color.Black);
-            Graphics graphics = panel_Tone_output.CreateGraphics();
-
-            graphics.Clear(Color.White);
-            Point p0 = new Point(1, panel_Tone_output.Height-1);
-            Point p1 = new Point(panel_Tone_output.Width - 1, panel_Tone_output.Height - 1);
-            graphics.DrawLine(pen, p0, p1);
-            graphics.DrawLine(pen, p0, new Point(1, 1));
-        }
+        }                
     }
 }
