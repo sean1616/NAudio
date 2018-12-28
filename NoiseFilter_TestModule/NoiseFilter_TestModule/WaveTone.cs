@@ -36,12 +36,12 @@ namespace NoiseFilter_TestModule
 
         public override int Read(byte[] buffer, int offset, int count)
         {
-            int samples = count / 2;
+            int samples = count / 2;  //Sample數為總數的一半
             for (int i = 0; i < samples; i++)
             {
-                double sine = amplitude * Math.Sin(Math.PI * 2 * frequency * time);
-                time += 1.0 / 44100;
-                short truncated = (short)Math.Round(sine * (Math.Pow(2, 15) - 1));
+                double sine = amplitude * Math.Sin(Math.PI * 2 * frequency * time);  //決定波型，此處為sine波
+                time += 1.0 / 44100;   //Sample rate 的倒數
+                short truncated = (short)Math.Round(sine * (Math.Pow(2, 15) - 1));   //
                 buffer[i * 2] = (byte)(truncated & 0x00ff);
                 buffer[i * 2 + 1] = (byte)((truncated & 0xff00) >> 8);
             }

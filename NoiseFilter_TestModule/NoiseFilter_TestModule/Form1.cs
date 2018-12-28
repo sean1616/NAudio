@@ -181,6 +181,24 @@ namespace NoiseFilter_TestModule
                 stream.Dispose();
                 stream = null;
             }
-        }                
+        }
+
+        private void autoScaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            needsAutoScaling = true;
+        }
+
+        private void Btn_Add_Tone_Click(object sender, EventArgs e)
+        {
+            double freq = double.Parse(TxtBox_Frequency.Text);  //取得頻率設定值
+            double amp = double.Parse(TxtBox_Amplitude.Text);   //取得振幅設定值
+
+            WaveTone tone = new WaveTone(freq, amp);
+            stream = new BlockAlignReductionStream(tone);
+
+            output = new DirectSoundOut();
+            output.Init(stream);
+            output.Play();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Btn_Start_Tone = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,10 +39,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Btn_Stop_Tone = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.scottPlotUC1 = new ScottPlot.ScottPlotUC();
             this.timerReplot = new System.Windows.Forms.Timer(this.components);
+            this.scottPlotUC1 = new ScottPlot.ScottPlotUC();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.autoScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_Add_Tone = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Start_Tone
@@ -98,6 +104,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Btn_Add_Tone);
             this.groupBox1.Controls.Add(this.Btn_Stop_Tone);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
@@ -105,9 +112,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.TxtBox_Amplitude);
             this.groupBox1.Controls.Add(this.TxtBox_Frequency);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(193, 138);
+            this.groupBox1.Size = new System.Drawing.Size(193, 166);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tone Test";
@@ -132,6 +139,11 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tone Receive";
             // 
+            // timerReplot
+            // 
+            this.timerReplot.Interval = 2;
+            this.timerReplot.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
             // scottPlotUC1
             // 
             this.scottPlotUC1.Location = new System.Drawing.Point(5, 13);
@@ -140,16 +152,50 @@
             this.scottPlotUC1.Size = new System.Drawing.Size(1069, 248);
             this.scottPlotUC1.TabIndex = 10;
             // 
-            // timerReplot
+            // toolStrip1
             // 
-            this.timerReplot.Interval = 2;
-            this.timerReplot.Tick += new System.EventHandler(this.Timer_Tick);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1316, 25);
+            this.toolStrip1.TabIndex = 11;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.autoScaleToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // autoScaleToolStripMenuItem
+            // 
+            this.autoScaleToolStripMenuItem.Name = "autoScaleToolStripMenuItem";
+            this.autoScaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.autoScaleToolStripMenuItem.Text = "Auto-Scale";
+            this.autoScaleToolStripMenuItem.Click += new System.EventHandler(this.autoScaleToolStripMenuItem_Click);
+            // 
+            // Btn_Add_Tone
+            // 
+            this.Btn_Add_Tone.Location = new System.Drawing.Point(32, 132);
+            this.Btn_Add_Tone.Name = "Btn_Add_Tone";
+            this.Btn_Add_Tone.Size = new System.Drawing.Size(142, 23);
+            this.Btn_Add_Tone.TabIndex = 10;
+            this.Btn_Add_Tone.Text = "Add Tone";
+            this.Btn_Add_Tone.UseVisualStyleBackColor = true;
+            this.Btn_Add_Tone.Click += new System.EventHandler(this.Btn_Add_Tone_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1316, 641);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -159,7 +205,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,6 +225,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private ScottPlot.ScottPlotUC scottPlotUC1;
         private System.Windows.Forms.Timer timerReplot;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem autoScaleToolStripMenuItem;
+        private System.Windows.Forms.Button Btn_Add_Tone;
     }
 }
 
