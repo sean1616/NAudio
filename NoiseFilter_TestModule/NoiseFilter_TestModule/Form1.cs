@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Collections.Generic;
 using NAudio.Wave;
 
 namespace NoiseFilter_TestModule
@@ -13,6 +14,7 @@ namespace NoiseFilter_TestModule
 
         // prepare class objects
         public BufferedWaveProvider bwp;
+        WaveTone tone;
 
         public Form1()
         {
@@ -23,13 +25,16 @@ namespace NoiseFilter_TestModule
             timerReplot.Enabled = true;
         }
 
+        List<DirectSoundOut> outputs = new List<DirectSoundOut>();
         private DirectSoundOut output = null;
         private BlockAlignReductionStream stream = null;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            
+            timer1.Tick += timer1_Tick;
+            timer1.Interval = 5000;
+            timer1.Enabled = true;
+
         }
 
         void AudioDataAvailable(object sender, WaveInEventArgs e)
@@ -150,23 +155,39 @@ namespace NoiseFilter_TestModule
             //Application.DoEvents();
 
         }
-
+                
         private void Btn_Start_Tone_Click(object sender, EventArgs e)
         {
-            double freq = double.Parse(TxtBox_Frequency.Text);  //取得頻率設定值
-            double amp = double.Parse(TxtBox_Amplitude.Text);   //取得振幅設定值
+            if (outputs.Count == 0)
+            {
+                double freq = double.Parse(TxtBox_Frequency.Text);  //取得頻率設定值
+                double amp = double.Parse(TxtBox_Amplitude.Text);   //取得振幅設定值
 
-            WaveTone tone = new WaveTone(freq, amp);
-            stream = new BlockAlignReductionStream(tone);
+                if (output != null) output.Dispose();
 
-            output = new DirectSoundOut();
-            output.Init(stream);
-            output.Play();
+                tone = new WaveTone(freq, amp);
+                stream = new BlockAlignReductionStream(tone);
+
+                output = new DirectSoundOut();
+                output.Init(stream);
+                output.Play();
+
+                outputs.Add(output);
+            }
+            else
+            {
+                foreach (DirectSoundOut o in outputs) o.Play();
+            }
+
+            
         }
 
         private void Btn_Stop_Tone_Click(object sender, EventArgs e)
         {
-            if (output != null) output.Stop();
+            if (outputs.Count > 0)
+            {
+                foreach (DirectSoundOut o in outputs) { o.Stop(); }
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -193,12 +214,23 @@ namespace NoiseFilter_TestModule
             double freq = double.Parse(TxtBox_Frequency.Text);  //取得頻率設定值
             double amp = double.Parse(TxtBox_Amplitude.Text);   //取得振幅設定值
 
-            WaveTone tone = new WaveTone(freq, amp);
+            tone = new WaveTone(freq, amp);
             stream = new BlockAlignReductionStream(tone);
-
+            
             output = new DirectSoundOut();
+            outputs.Add(output);
             output.Init(stream);
             output.Play();
+        }
+
+        private void Btn_Clear_Tone_Click(object sender, EventArgs e)
+        {
+           outputs = new List<DirectSoundOut>();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            needsAutoScaling = true;
         }
     }
 }

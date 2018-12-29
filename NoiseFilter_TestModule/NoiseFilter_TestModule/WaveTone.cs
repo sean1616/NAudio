@@ -23,7 +23,7 @@ namespace NoiseFilter_TestModule
             get;
             set;
         }
-
+                
         public override long Length
         {
             get { return long.MaxValue; }

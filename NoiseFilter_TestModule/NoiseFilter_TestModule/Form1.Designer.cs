@@ -37,14 +37,17 @@
             this.TxtBox_Amplitude = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_Add_Tone = new System.Windows.Forms.Button();
             this.Btn_Stop_Tone = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.timerReplot = new System.Windows.Forms.Timer(this.components);
             this.scottPlotUC1 = new ScottPlot.ScottPlotUC();
+            this.timerReplot = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.autoScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Btn_Add_Tone = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Clear_Tone = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -52,9 +55,9 @@
             // 
             // Btn_Start_Tone
             // 
-            this.Btn_Start_Tone.Location = new System.Drawing.Point(32, 74);
+            this.Btn_Start_Tone.Location = new System.Drawing.Point(6, 74);
             this.Btn_Start_Tone.Name = "Btn_Start_Tone";
-            this.Btn_Start_Tone.Size = new System.Drawing.Size(142, 23);
+            this.Btn_Start_Tone.Size = new System.Drawing.Size(80, 23);
             this.Btn_Start_Tone.TabIndex = 0;
             this.Btn_Start_Tone.Text = "Start Tone";
             this.Btn_Start_Tone.UseVisualStyleBackColor = true;
@@ -104,6 +107,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Btn_Clear_Tone);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.Btn_Add_Tone);
             this.groupBox1.Controls.Add(this.Btn_Stop_Tone);
             this.groupBox1.Controls.Add(this.label2);
@@ -119,11 +124,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tone Test";
             // 
+            // Btn_Add_Tone
+            // 
+            this.Btn_Add_Tone.Location = new System.Drawing.Point(6, 132);
+            this.Btn_Add_Tone.Name = "Btn_Add_Tone";
+            this.Btn_Add_Tone.Size = new System.Drawing.Size(80, 23);
+            this.Btn_Add_Tone.TabIndex = 10;
+            this.Btn_Add_Tone.Text = "Add Tone";
+            this.Btn_Add_Tone.UseVisualStyleBackColor = true;
+            this.Btn_Add_Tone.Click += new System.EventHandler(this.Btn_Add_Tone_Click);
+            // 
             // Btn_Stop_Tone
             // 
-            this.Btn_Stop_Tone.Location = new System.Drawing.Point(32, 103);
+            this.Btn_Stop_Tone.Location = new System.Drawing.Point(6, 103);
             this.Btn_Stop_Tone.Name = "Btn_Stop_Tone";
-            this.Btn_Stop_Tone.Size = new System.Drawing.Size(142, 23);
+            this.Btn_Stop_Tone.Size = new System.Drawing.Size(80, 23);
             this.Btn_Stop_Tone.TabIndex = 9;
             this.Btn_Stop_Tone.Text = "Stop Tone";
             this.Btn_Stop_Tone.UseVisualStyleBackColor = true;
@@ -139,11 +154,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tone Receive";
             // 
-            // timerReplot
-            // 
-            this.timerReplot.Interval = 2;
-            this.timerReplot.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
             // scottPlotUC1
             // 
             this.scottPlotUC1.Location = new System.Drawing.Point(5, 13);
@@ -151,6 +161,11 @@
             this.scottPlotUC1.Name = "scottPlotUC1";
             this.scottPlotUC1.Size = new System.Drawing.Size(1069, 248);
             this.scottPlotUC1.TabIndex = 10;
+            // 
+            // timerReplot
+            // 
+            this.timerReplot.Interval = 2;
+            this.timerReplot.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // toolStrip1
             // 
@@ -176,19 +191,32 @@
             // autoScaleToolStripMenuItem
             // 
             this.autoScaleToolStripMenuItem.Name = "autoScaleToolStripMenuItem";
-            this.autoScaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.autoScaleToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.autoScaleToolStripMenuItem.Text = "Auto-Scale";
             this.autoScaleToolStripMenuItem.Click += new System.EventHandler(this.autoScaleToolStripMenuItem_Click);
             // 
-            // Btn_Add_Tone
+            // button1
             // 
-            this.Btn_Add_Tone.Location = new System.Drawing.Point(32, 132);
-            this.Btn_Add_Tone.Name = "Btn_Add_Tone";
-            this.Btn_Add_Tone.Size = new System.Drawing.Size(142, 23);
-            this.Btn_Add_Tone.TabIndex = 10;
-            this.Btn_Add_Tone.Text = "Add Tone";
-            this.Btn_Add_Tone.UseVisualStyleBackColor = true;
-            this.Btn_Add_Tone.Click += new System.EventHandler(this.Btn_Add_Tone_Click);
+            this.button1.Location = new System.Drawing.Point(92, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Clear_Tone
+            // 
+            this.Btn_Clear_Tone.Location = new System.Drawing.Point(92, 74);
+            this.Btn_Clear_Tone.Name = "Btn_Clear_Tone";
+            this.Btn_Clear_Tone.Size = new System.Drawing.Size(82, 23);
+            this.Btn_Clear_Tone.TabIndex = 12;
+            this.Btn_Clear_Tone.Text = "Clear Tone";
+            this.Btn_Clear_Tone.UseVisualStyleBackColor = true;
+            this.Btn_Clear_Tone.Click += new System.EventHandler(this.Btn_Clear_Tone_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -229,6 +257,9 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem autoScaleToolStripMenuItem;
         private System.Windows.Forms.Button Btn_Add_Tone;
+        private System.Windows.Forms.Button Btn_Clear_Tone;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
